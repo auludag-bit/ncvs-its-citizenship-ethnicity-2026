@@ -1,0 +1,22 @@
+# ICPSR terms of use forbid redistributing the survey data or codebooks.
+# Never commit them.
+*.dta
+*.sav
+*.por
+*.parquet
+*.rds
+*.RData
+*.Rhistory
+*-Codebook.pdf
+*-User_guide.pdf
+ICPSR_*.zip
+data/
+
+# Script output folders (rerun the scripts to regenerate)
+out_ccnc/
+output/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini

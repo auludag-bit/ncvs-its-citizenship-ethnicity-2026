@@ -1,0 +1,80 @@
+Maher rebuild N = 71,984 (target 71,984); dv==any_idtheft on all: TRUE
+
+======================================================================
+A. 2018 FACTORIAL: sample x specification x estimator
+======================================================================
+                               sample                spec           estimator      N    OR   lo   hi      p
+             S_M Maher's exact 71,984   Maher coding + PB unweighted/model-SE  71984 1.378 1.01 1.88 0.0420
+             S_M Maher's exact 71,984   Maher coding + PB   weighted/model-SE  71984 1.473 1.12 1.93 0.0050
+             S_M Maher's exact 71,984   Maher coding + PB  weighted/design-SE  71984 1.473 1.00 2.18 0.0522
+             S_M Maher's exact 71,984 Maher coding, no PB unweighted/model-SE  71984 1.301 0.96 1.77 0.0934
+             S_M Maher's exact 71,984 Maher coding, no PB   weighted/model-SE  71984 1.400 1.07 1.83 0.0142
+             S_M Maher's exact 71,984 Maher coding, no PB  weighted/design-SE  71984 1.400 0.95 2.06 0.0863
+             S_M Maher's exact 71,984    Corrected, no PB unweighted/model-SE  71984 1.318 0.97 1.79 0.0787
+             S_M Maher's exact 71,984    Corrected, no PB   weighted/model-SE  71984 1.421 1.08 1.86 0.0108
+             S_M Maher's exact 71,984    Corrected, no PB  weighted/design-SE  71984 1.421 0.96 2.09 0.0758
+             S_M Maher's exact 71,984      Corrected + PB unweighted/model-SE  71984 1.394 1.02 1.90 0.0353
+             S_M Maher's exact 71,984      Corrected + PB   weighted/model-SE  71984 1.492 1.14 1.96 0.0038
+             S_M Maher's exact 71,984      Corrected + PB  weighted/design-SE  71984 1.492 1.01 2.21 0.0453
+ S_R corrected, bank AND card holders   Maher coding + PB unweighted/model-SE  71984 1.378 1.01 1.88 0.0420
+ S_R corrected, bank AND card holders   Maher coding + PB   weighted/model-SE  71984 1.473 1.12 1.93 0.0050
+ S_R corrected, bank AND card holders   Maher coding + PB  weighted/design-SE  71984 1.473 1.00 2.18 0.0522
+ S_R corrected, bank AND card holders Maher coding, no PB unweighted/model-SE  73108 1.335 0.99 1.81 0.0616
+ S_R corrected, bank AND card holders Maher coding, no PB   weighted/model-SE  73108 1.425 1.09 1.86 0.0091
+ S_R corrected, bank AND card holders Maher coding, no PB  weighted/design-SE  73108 1.425 0.97 2.09 0.0681
+ S_R corrected, bank AND card holders    Corrected, no PB unweighted/model-SE  74908 1.333 0.99 1.80 0.0602
+ S_R corrected, bank AND card holders    Corrected, no PB   weighted/model-SE  74908 1.405 1.08 1.83 0.0121
+ S_R corrected, bank AND card holders    Corrected, no PB  weighted/design-SE  74908 1.405 0.97 2.04 0.0759
+ S_R corrected, bank AND card holders      Corrected + PB unweighted/model-SE  73730 1.387 1.02 1.88 0.0361
+ S_R corrected, bank AND card holders      Corrected + PB   weighted/model-SE  73730 1.456 1.11 1.91 0.0062
+ S_R corrected, bank AND card holders      Corrected + PB  weighted/design-SE  73730 1.456 0.99 2.14 0.0553
+                   S_C corrected full   Maher coding + PB unweighted/model-SE  97580 1.275 0.98 1.67 0.0749
+                   S_C corrected full   Maher coding + PB   weighted/model-SE  97580 1.364 1.07 1.73 0.0110
+                   S_C corrected full   Maher coding + PB  weighted/design-SE  97580 1.364 0.99 1.87 0.0543
+                   S_C corrected full Maher coding, no PB unweighted/model-SE  98934 1.200 0.92 1.56 0.1742
+                   S_C corrected full Maher coding, no PB   weighted/model-SE  98934 1.272 1.00 1.61 0.0472
+                   S_C corrected full Maher coding, no PB  weighted/design-SE  98934 1.272 0.93 1.74 0.1312
+                   S_C corrected full    Corrected, no PB unweighted/model-SE 101389 1.261 0.97 1.64 0.0809
+                   S_C corrected full    Corrected, no PB   weighted/model-SE 101389 1.331 1.05 1.69 0.0186
+                   S_C corrected full    Corrected, no PB  weighted/design-SE 101389 1.331 0.98 1.81 0.0701
+                   S_C corrected full      Corrected + PB unweighted/model-SE  99966 1.334 1.02 1.74 0.0334
+                   S_C corrected full      Corrected + PB   weighted/model-SE  99966 1.413 1.11 1.79 0.0046
+                   S_C corrected full      Corrected + PB  weighted/design-SE  99966 1.413 1.03 1.93 0.0312
+
+Sanity: step10-style design built on coop_cc alone (should give p~.052):
+  Estimate Std. Error    t value   Pr(>|t|) 
+   0.38700    0.19780    1.95700    0.05217 
+
+======================================================================
+B. 2021 corrected sample, +/- PB, three estimators
+======================================================================
+           estimator     N    OR   lo   hi      p             spec
+ unweighted/model-SE 92211 0.800 0.58 1.10 0.1687 Corrected, no PB
+   weighted/model-SE 92211 0.891 0.67 1.18 0.4222 Corrected, no PB
+  weighted/design-SE 92211 0.891 0.60 1.32 0.5610 Corrected, no PB
+           estimator     N    OR   lo   hi      p           spec
+ unweighted/model-SE 91146 0.826 0.60 1.14 0.2458 Corrected + PB
+   weighted/model-SE 91146 0.926 0.70 1.23 0.5962 Corrected + PB
+  weighted/design-SE 91146 0.926 0.62 1.38 0.7047 Corrected + PB
+
+======================================================================
+C. ACJS: protective-behavior interaction, with and without past-year victimization control
+======================================================================
+
+2018 (0 = as in step10; 1 = + past-year victimization control)
+   behavior     N0   or0       p0     N1   or1       p1 vict_or  p0_holm  p1_holm
+  passwords 100757 0.816 4.53e-02 100757 0.795 2.56e-02   2.513 4.88e-02 3.57e-02
+ monitoring 100673 0.599 9.89e-04 100673 0.588 6.95e-04   1.643 2.97e-03 2.08e-03
+ protection 100863 0.638 2.44e-02 100863 0.626 1.79e-02   1.653 4.88e-02 3.57e-02
+   software 100576 0.501 1.44e-06 100576 0.494 8.78e-07   1.500 7.19e-06 4.39e-06
+      shred 100969 1.541 8.14e-06 100969 1.531 1.07e-05   1.352 3.25e-05 4.27e-05
+
+2021 (0 = as in step10; 1 = + past-year victimization control)
+   behavior    N0   or0       p0    N1   or1       p1 vict_or  p0_holm  p1_holm
+  passwords 91653 0.719 1.00e-03 91651 0.717 9.64e-04   2.297 3.00e-03 2.89e-03
+ monitoring 91737 0.476 7.02e-03 91735 0.476 6.91e-03   1.642 1.40e-02 1.38e-02
+ protection 91753 0.290 7.07e-08 91751 0.290 6.66e-08   1.505 3.53e-07 3.33e-07
+   software 91536 0.681 3.97e-04 91534 0.680 4.26e-04   1.498 1.59e-03 1.70e-03
+      shred 91860 1.190 7.77e-02 91858 1.190 7.79e-02   1.009 7.77e-02 7.79e-02
+
+COMPLETE.

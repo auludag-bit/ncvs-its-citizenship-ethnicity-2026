@@ -1,0 +1,335 @@
+======================================================================
+0. GATE-VARIABLE DISCOVERY AND CODE LABELS
+======================================================================
+
+--- 2018: candidate gates / screeners ---
+  VS010     DURING THE PAST 12 MONTHS HAVE YOU HAD AT LEAST ONE BANK ACCOUNT?
+  VS011     AT LEAST ONE BANK ACCOUNT FLAG
+  VS012     MISUSE OF EXISTING ACCOUNTS: EXISTING CHECKING, SAVINGS, DEBIT, AT
+  VS016     HAVE YOU HAD A CREDIT CARD IN THE PAST YEAR?
+  VS017     MISUSE OF EXISTING ACCOUNTS: EXISTING CREDIT CARD?
+  VS019     MISUSE OF EXISTING ACCOUNTS: ANOTHER TYPE OF EXISTING ACCOUNT
+  VS033B    TYPES OF EXISTING ACCOUNTS MISUSED: ENTERTAINMENT ACCOUNTS
+  VS033C    TYPES OF EXISTING ACCOUNTS MISUSED: EMAIL ACCOUNTS
+  VS031     TYPES OF EXISTING ACCOUNTS MISUSED: OTHER TYPE OF EXISTING ACCOUNT
+  VS032     OTHER TYPE OF EXISTING ACCOUNTS FLAG
+  VS033A    TYPES OF EXISTING ACCOUNTS MISUSED: ONLINE SHOPPING ACCOUNTS
+  VS041     OPENING OF NEW ACCOUNTS
+  VS042     OPENING OF NEW ACCOUNTS FLAG
+  VS043     TYPES OF NEW ACCOUNTS FRAUDULENTLY CREATED: TELEPHONE ACCOUNTS
+  VS044     NEW TELEPHONE ACCOUNTS FLAG
+  VS045     TYPES OF NEW ACCOUNTS FRAUDULENTLY CREATED: CREDIT CARD ACCOUNTS
+  VS045F    NEW CREDIT CARD ACCOUNTS FLAG
+  VS047     TYPES OF NEW ACCOUNTS FRAUDULENTLY CREATED: CHECKING OR SAVINGS AC
+  VS048     NEW CHECKING OR SAVINGS ACCOUNTS FLAG
+  VS049     TYPES OF NEW ACCOUNTS FRAUDULENTLY CREATED: LOANS OR MORTGAGES
+  VS061     TYPES OF NEW ACCOUNTS FRAUDULENTLY CREATED: NEW UTILITIES ACCOUNTS
+  VS061F    NEW UTILITIES ACCOUNTS FLAG
+  VS012 value labels: 1=Yes; 2=No; 8=Residue; 9=Out of Scope; 98=Refused; 99=Don't know
+  VS017 value labels: 1=Yes; 2=No; 8=Residue; 9=Out of Scope; 98=Refused; 99=Don't know
+  VS019 value labels: 1=Yes; 2=No; 8=Residue; 9=Out of Scope; 98=Refused; 99=Don't know
+  VS041 value labels: 1=Yes; 2=No; 8=Residue; 9=Out of Scope; 98=Refused; 99=Don't know
+  VS063 value labels: 1=Yes; 2=No; 8=Residue; 9=Out of Scope; 98=Refused; 99=Don't know
+
+--- 2021: candidate gates / screeners ---
+  VS010A    HAVE YOU EVER HAD A CHECKING OR SAVINGS ACCOUNT IN YOUR NAME THROU
+  VS010AF   AT LEAST ONE CHECKING OR SAVINGS ACCOUNT THROUGH A BANK OR FINANCI
+  VS010B    MISUSE OF EXISTING ACCOUNTS: EXISTING CHECKING, SAVINGS, DEBIT, AT
+  VS010BF   MISUSE OF EXISTING ACCOUNTS: EXISTING CHECKING, SAVINGS, DEBIT, AT
+  VS012     MISUSE OF EXISTING ACCOUNTS IN PAST 12 MONTHS: EXISTING CHECKING, 
+  VS012F    MISUSE OF EXISTING ACCOUNTS IN PAST 12 MONTHS: CHECKING, SAVINGS, 
+  VS012A    MISUSE OF EXISTING ACCOUNTS: DID THIS MOST RECENTLY HAPPEN IN 2021
+  VS012B    MISUSE OF EXISTING ACCOUNTS: IN WHAT MONTH?
+  VS016A    HAVE YOU EVER HAD A CREDIT CARD ACCOUNT IN YOUR NAME?
+  VS016AF   HAVE HAD CREDIT CARD ACCOUNT FLAG
+  VS016B    MISUSE OF CREDIT CARD ACCOUNT - EVER
+  VS016BF   CREDIT CARD ACCOUNT MISUSED - EVER FLAG
+  VS017     MISUSE OF CREDIT CARD ACCOUNT - PAST 12 MONTHS
+  VS017F    CREDIT CARD ACCOUNT MISUSED - PAST 12 MONTHS FLAG
+  VS017A    MISUSE OF CREDIT CARD ACCOUNT: DID THIS MOST RECENTLY HAPPEN IN 20
+  VS017B    MISUSE OF CREDIT CARD ACCOUNT: IN WHAT MONTH?
+  VS017C    HAVE YOU EVER HAD AT LEAST ONE EMAIL ACCOUNT OR SOCIAL MEDIA ACCOU
+  VS017CF   EMAIL OR SOCIAL MEDIA ACCOUNT FLAG
+  VS017D    EMAIL OR SOCIAL MEDIA ACCOUNT MISUSED - EVER
+  VS017DF   MISUSE OF EMAIL OR SOCIAL MEDIA ACCOUNT - EVER FLAG
+  VS017E    MISUSE OF EMAIL OR SOCIAL MEDIA ACCOUNT - PAST 12 MONTHS
+  VS017EF   MISUSE OF EMAIL OR SOCIAL MEDIA ACCOUNT - PAST 12 MONTHS FLAG
+  VS017G    TYPE OF ACCOUNT MISUSED: EMAIL ACCOUNT
+  VS017GF   EMAIL ACCOUNT USED FLAG
+  VS017H    TYPE OF ACCOUNT USED WITHOUT PERMISSION: SOCIAL MEDIA ACCOUNT
+  VS017HF   SOCIAL MEDIA ACCOUNT USED WITHOUT PERMISSION FLAG
+  VS017I    EMAIL OR SOCIAL MEDIA ACCOUNT MISUSE - DID THIS MOST RECENTLY HAPP
+  VS017J    EMAIL OR SOCIAL MEDIA ACCOUNT MISUSE - IN WHAT MONTH?
+  VS017K    MISUSE OF OTHER EXISTING ACCOUNTS - EVER
+  VS017KF   MISUSE OF OTHER EXISTING ACCOUNTS - EVER FLAG
+  VS019     MISUSE OF OTHER EXISTING ACCOUNTS - PAST 12 MONTHS
+  VS033B    TYPES OF EXISTING ACCOUNTS MISUSED: ENTERTAINMENT ACCOUNTS
+  VS031     TYPES OF EXISTING ACCOUNTS MISUSED: OTHER TYPE OF EXISTING ACCOUNT
+  VS032     OTHER TYPE OF EXISTING ACCOUNTS FLAG
+  VS033I    MISUSE OF OTHER EXISTING ACCOUNTS - DID THIS MOST RECENTLY HAPPEN 
+  VS033J    MISUSE OF OTHER EXISTING ACCOUNTS - IN WHAT MONTH?
+  VS033K    NEW ACCOUNTS FRAUDULENTLY CREATED - EVER
+  VS033KF   NEW ACCOUNTS FRAUDULENTLY CREATED - EVER FLAG
+  VS041     NEW ACCOUNTS FRAUDULENTLY CREATED - PAST 12 MONTHS
+  VS042     NEW ACCOUNTS FRAUDULENTLY CREATED - PAST 12 MONTHS FLAG
+  VS012 value labels: 1=Yes; 2=No; 8=Residue; 9=Out of Scope; 98=Refused; 99=Don't know
+  VS017 value labels: 1=Yes; 2=No; 8=Residue; 9=Out of Scope; 98=Refused; 99=Don't know
+  VS019 value labels: 1=Yes; 2=No; 8=Residue; 9=Out of Scope; 98=Refused; 99=Don't know
+  VS041 value labels: 1=Yes; 2=No; 8=Residue; 9=Out of Scope; 98=Refused; 99=Don't know
+  VS063 value labels: 1=Yes; 2=No; 8=Residue; 9=Out of Scope; 98=Refused; 99=Don't know
+
+Loading data...
+
+======================================================================
+2. OUTCOME-SCREENER CODE 9 AMONG ITS COMPLETERS
+======================================================================
+
+--- 2021 completers (n=93,308) ---
+  VS012  1= 2,665  2= 6,372  9=84,271
+  VS017  1= 3,617  2= 8,614  8=     1  9=81,076
+  VS019  1=   885  2= 1,207  9=91,216
+  VS041  1=   589  2= 1,391  8=     1  9=91,327
+  VS063  1=   909  2= 1,188  9=91,211
+
+--- 2018 completers (n=102,418) ---
+  VS012  1= 4,302  2=88,572  9= 9,544
+  VS017  1= 5,262  2=73,171  9=23,985
+  VS019  1=  1,030  2=101,388
+  VS041  1=    705  2=101,713
+  VS063  1=    408  2=102,010
+
+--- 2021: code 9 cross-tabulated against its gate question ---
+
+  VS017 == 9  BY  VS016A (ever had a credit card account)
+       gate
+item9       1     2
+  FALSE 12232     0
+  TRUE  63271 17805
+
+  VS017 == 9  BY  VS016B (credit card ever misused)
+       gate
+item9       1     2     9
+  FALSE 12232     0     0
+  TRUE      0 63271 17805
+
+  VS012 == 9  BY  VS010A (ever had checking/savings account)
+       gate
+item9       1     2
+  FALSE  9037     0
+  TRUE  78485  5786
+
+  VS019 == 9  BY  VS017K (other existing accounts ever misused)
+       gate
+item9       1     2
+  FALSE  2092     0
+  TRUE      0 91216
+
+  VS041 == 9  BY  VS033K (new accounts ever fraudulently created)
+       gate
+item9       1     2
+  FALSE  1981     0
+  TRUE      0 91327
+
+--- 2018: code 9 cross-tabulated against its gate question ---
+
+  VS017 == 9  BY  VS014 (currently has >=1 credit card)
+       gate
+item9       1     2    98    99
+  FALSE 77589   840     4     0
+  TRUE      0 23979     4     2
+
+  VS017 == 9  BY  VS016 (had a credit card in the past year)
+       gate
+item9       1     2     9
+  FALSE   844     0 77589
+  TRUE      0 23985     0
+
+  VS012 == 9  BY  VS010 (had a bank account in past 12 months)
+       gate
+item9       1     2
+  FALSE 92874     0
+  TRUE      0  9544
+
+======================================================================
+3. OUT-OF-SCOPE RATES BY GROUP
+======================================================================
+
+--- 2021 contact items, victims only (denominator: 7,616) ---
+  VS098:
+         citgrp    n oos9 pct9 other_miss
+    cit_nonhisp 6829    0    0         16
+       cit_hisp  576    0    0          1
+ noncit_nonhisp  145    0    0          0
+    noncit_hisp   66    0    0          0
+  VS100:
+         citgrp    n oos9 pct9 other_miss
+    cit_nonhisp 6829 1419 20.8         25
+       cit_hisp  576  141 24.5          2
+ noncit_nonhisp  145   37 25.5          0
+    noncit_hisp   66   14 21.2          0
+  VS133:
+         citgrp    n oos9 pct9 other_miss
+    cit_nonhisp 6829    0    0         17
+       cit_hisp  576    0    0          1
+ noncit_nonhisp  145    0    0          0
+    noncit_hisp   66    0    0          1
+
+--- 2018 contact items, victims only (denominator: 10,046) ---
+  VS098:
+         citgrp    n oos9 pct9 other_miss
+    cit_nonhisp 8996    0    0          9
+       cit_hisp  756    0    0          2
+ noncit_nonhisp  174    0    0          0
+    noncit_hisp  120    0    0          1
+  VS100:
+         citgrp    n oos9 pct9 other_miss
+    cit_nonhisp 8996    0    0         22
+       cit_hisp  756    0    0          3
+ noncit_nonhisp  174    0    0          0
+    noncit_hisp  120    0    0          1
+  VS133:
+         citgrp    n oos9 pct9 other_miss
+    cit_nonhisp 8996    0    0         13
+       cit_hisp  756    0    0          3
+ noncit_nonhisp  174    0    0          0
+    noncit_hisp  120    0    0          1
+
+--- 2021 protective practices, all completers (denominator: 92,941) ---
+  VS345:
+         citgrp     n oos9 pct9 other_miss
+    cit_nonhisp 79310    0    0        531
+       cit_hisp  9646    0    0         44
+ noncit_nonhisp  1930    0    0         16
+    noncit_hisp  2055    0    0          6
+  VS347:
+         citgrp     n oos9 pct9 other_miss
+    cit_nonhisp 79310    0    0        455
+       cit_hisp  9646    0    0         34
+ noncit_nonhisp  1930    0    0         13
+    noncit_hisp  2055    0    0          3
+  VS349:
+         citgrp     n oos9 pct9 other_miss
+    cit_nonhisp 79310    0    0        325
+       cit_hisp  9646    0    0         32
+ noncit_nonhisp  1930    0    0         13
+    noncit_hisp  2055    0    0          6
+  VS353:
+         citgrp     n oos9 pct9 other_miss
+    cit_nonhisp 79310    0    0        628
+       cit_hisp  9646    0    0         52
+ noncit_nonhisp  1930    0    0         20
+    noncit_hisp  2055    0    0          7
+  VS355:
+         citgrp     n oos9 pct9 other_miss
+    cit_nonhisp 79310    0    0        444
+       cit_hisp  9646    0    0         31
+ noncit_nonhisp  1930    0    0         15
+    noncit_hisp  2055    0    0          4
+
+--- 2018 protective practices, all completers (denominator: 102,117) ---
+  VS345:
+         citgrp     n oos9 pct9 other_miss
+    cit_nonhisp 87391    0    0        585
+       cit_hisp  9934    0    0         45
+ noncit_nonhisp  2276    0    0         19
+    noncit_hisp  2516    0    0         12
+  VS347:
+         citgrp     n oos9 pct9 other_miss
+    cit_nonhisp 87391    0    0        660
+       cit_hisp  9934    0    0         57
+ noncit_nonhisp  2276    0    0         16
+    noncit_hisp  2516    0    0         12
+  VS349:
+         citgrp     n oos9 pct9 other_miss
+    cit_nonhisp 87391    0    0        389
+       cit_hisp  9934    0    0         34
+ noncit_nonhisp  2276    0    0          9
+    noncit_hisp  2516    0    0         13
+  VS353:
+         citgrp     n oos9 pct9 other_miss
+    cit_nonhisp 87391    0    0        752
+       cit_hisp  9934    0    0         57
+ noncit_nonhisp  2276    0    0         21
+    noncit_hisp  2516    0    0         10
+  VS355:
+         citgrp     n oos9 pct9 other_miss
+    cit_nonhisp 87391    0    0        488
+       cit_hisp  9934    0    0         42
+ noncit_nonhisp  2276    0    0         12
+    noncit_hisp  2516    0    0         10
+
+======================================================================
+4. VISIBILITY BENCHMARK (DIRECT, UNADJUSTED, DESIGN-BASED)
+======================================================================
+
+### 2021: unadjusted weighted rates (%), design SEs
+          group  rho rho_se kappa kap_se    nu nu_se kappa2
+    cit_nonhisp 8.23   0.14 80.45   0.61 6.611 0.114  80.45
+       cit_hisp 5.54   0.26 76.78   2.07 4.247 0.221  76.78
+ noncit_nonhisp 7.10   0.62 74.34   4.18 5.281 0.547  74.34
+    noncit_hisp 3.36   0.50 70.93   7.44 2.386 0.379  70.93
+  (kappa2 = contact using only the two universally administered
+   items VS098|VS133, excluding the skip-heavy credit-bureau item)
+  check nu ~= rho*kappa: 0.066, 0.043, 0.053, 0.024
+
+  Pairwise differences in nu (percentage points):
+                     contrast diff_pp se_pp  ci_lo  ci_hi        p   p_holm
+       cit_hisp - cit_nonhisp  -2.364 0.246 -2.850 -1.877 1.09e-17 5.45e-17
+ noncit_nonhisp - cit_nonhisp  -1.331 0.553 -2.422 -0.239 1.72e-02 3.44e-02
+    noncit_hisp - cit_nonhisp  -4.225 0.396 -5.007 -3.443 1.20e-20 7.20e-20
+    noncit_nonhisp - cit_hisp   1.033 0.562 -0.077  2.143 6.80e-02 6.80e-02
+       noncit_hisp - cit_hisp  -1.861 0.444 -2.738 -0.985 4.45e-05 1.53e-04
+ noncit_hisp - noncit_nonhisp  -2.895 0.685 -4.246 -1.543 3.83e-05 1.53e-04
+
+  Deficit decomposition, each group vs. citizen non-Hispanic:
+          group nu_ratio rho_ratio kappa_ratio pct_from_recognition
+    cit_nonhisp    1.000     1.000       1.000                  NaN
+       cit_hisp    0.642     0.673       0.954                 89.4
+ noncit_nonhisp    0.799     0.863       0.924                 65.0
+    noncit_hisp    0.361     0.409       0.882                 87.7
+ pct_from_contact
+              NaN
+             10.6
+             35.0
+             12.3
+
+### 2018: unadjusted weighted rates (%), design SEs
+          group  rho rho_se kappa kap_se    nu nu_se kappa2
+    cit_nonhisp 9.86   0.15 90.20   0.42 8.885 0.137  89.38
+       cit_hisp 7.11   0.30 87.74   1.34 6.209 0.287  86.93
+ noncit_nonhisp 7.08   0.57 88.53   2.83 6.271 0.528  87.13
+    noncit_hisp 4.76   0.56 85.24   6.89 4.002 0.436  83.90
+  (kappa2 = contact using only the two universally administered
+   items VS098|VS133, excluding the skip-heavy credit-bureau item)
+  check nu ~= rho*kappa: 0.089, 0.062, 0.063, 0.041
+
+  Pairwise differences in nu (percentage points):
+                     contrast diff_pp se_pp  ci_lo  ci_hi        p   p_holm
+       cit_hisp - cit_nonhisp  -2.676 0.319 -3.305 -2.047 1.73e-14 8.65e-14
+ noncit_nonhisp - cit_nonhisp  -2.614 0.534 -3.667 -1.561 2.23e-06 8.92e-06
+    noncit_hisp - cit_nonhisp  -4.884 0.453 -5.778 -3.989 5.68e-21 3.41e-20
+    noncit_nonhisp - cit_hisp   0.062 0.602 -1.127  1.251 9.18e-01 9.18e-01
+       noncit_hisp - cit_hisp  -2.207 0.504 -3.203 -1.212 2.08e-05 6.24e-05
+ noncit_hisp - noncit_nonhisp  -2.270 0.627 -3.507 -1.032 3.88e-04 7.76e-04
+
+  Deficit decomposition, each group vs. citizen non-Hispanic:
+          group nu_ratio rho_ratio kappa_ratio pct_from_recognition
+    cit_nonhisp    1.000     1.000       1.000                  NaN
+       cit_hisp    0.699     0.721       0.973                 92.2
+ noncit_nonhisp    0.706     0.718       0.981                 94.6
+    noncit_hisp    0.450     0.483       0.945                 92.8
+ pct_from_contact
+              NaN
+              7.8
+              5.4
+              7.2
+
+======================================================================
+5. ADJUSTED CONTACT MODEL, TWO-ITEM COMPOSITE (SENSITIVITY)
+======================================================================
+Run in step10 with outcome contact_2 if this differs materially from
+the any_contact result; reported here as unadjusted rates above.
+
+======================================================================
+COMPLETE.
+======================================================================

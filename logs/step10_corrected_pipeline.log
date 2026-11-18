@@ -1,0 +1,379 @@
+Loading raw data from: [local path removed]
+2018: rows=139997, VS363>0: 102418, completers: 102418
+2021: rows=133753, VS363>0: 93308, completers: 93308
+
+======================================================================
+SECTION 1: VICTIMIZATION MODELS (2021 PRIMARY, 2018 REPLICATION)
+======================================================================
+
+--- 2021 any_idtheft: bivariate (no controls) ---
+        Variable     OR CI_low CI_high   p_value
+      noncitizen 0.8529 0.7071  1.0287 9.550e-02
+        hispanic 0.6542 0.5928  0.7220 1.008e-14
+ hisp_noncitizen 0.6958 0.4758  1.0177 6.143e-02
+N (model frame) = 92,939;  design df = 170
+
+--- 2018 any_idtheft: bivariate (no controls) ---
+        Variable     OR CI_low CI_high   p_value
+      noncitizen 0.6970 0.5866  0.8283 5.730e-05
+        hispanic 0.6995 0.6361  0.7693 5.646e-12
+ hisp_noncitizen 0.9368 0.6977  1.2576 6.621e-01
+N (model frame) = 102,117;  design df = 170
+
+--- 2021 any_idtheft (PRIMARY WAVE): adjusted, dummy+interaction ---
+        Variable     OR CI_low CI_high   p_value
+      noncitizen 0.8876 0.7388  1.0664 2.013e-01
+        hispanic 0.7590 0.6862  0.8396 2.516e-07
+ hisp_noncitizen 0.8913 0.6033  1.3167 5.610e-01
+N (model frame) = 92,211;  design df = 170
+Joint Wald test, citgrp (4 groups): F=13.710, df=(3, 153.0), p=5.747e-08
+
+Survey-standardized predicted probabilities (predictive margins):
+          group  margin       se   ci_lo   ci_hi     n events
+    cit_nonhisp 0.08025 0.001298 0.07769 0.08281 78720   6808
+       cit_hisp 0.06226 0.002928 0.05648 0.06804  9568    573
+ noncit_nonhisp 0.07196 0.006060 0.06000 0.08392  1892    143
+    noncit_hisp 0.04999 0.007559 0.03507 0.06492  2026     66
+
+Pairwise risk differences (Holm within this outcome):
+                     contrast        rd       se     ci_lo     ci_hi         p
+       cit_hisp - cit_nonhisp -0.017980 0.003024 -0.023950 -0.012010 1.514e-08
+ noncit_nonhisp - cit_nonhisp -0.008288 0.006163 -0.020450  0.003879 1.805e-01
+    noncit_hisp - cit_nonhisp -0.030260 0.007819 -0.045690 -0.014820 1.552e-04
+    noncit_nonhisp - cit_hisp  0.009696 0.006538 -0.003209  0.022600 1.399e-01
+       noncit_hisp - cit_hisp -0.012270 0.008413 -0.028880  0.004337 1.465e-01
+ noncit_hisp - noncit_nonhisp -0.021970 0.009779 -0.041270 -0.002663 2.597e-02
+    p_holm
+ 9.084e-08
+ 4.197e-01
+ 7.761e-04
+ 4.197e-01
+ 4.197e-01
+ 1.039e-01
+
+--- 2018 any_idtheft (REPLICATION): adjusted, dummy+interaction ---
+        Variable     OR CI_low CI_high   p_value
+      noncitizen 0.6863 0.5706  0.8254 8.790e-05
+        hispanic 0.7868 0.7102  0.8717 8.034e-06
+ hisp_noncitizen 1.3310 0.9765  1.8141 7.009e-02
+N (model frame) = 101,389;  design df = 170
+Joint Wald test, citgrp (4 groups): F=14.439, df=(3, 153.0), p=2.486e-08
+
+Survey-standardized predicted probabilities (predictive margins):
+          group  margin       se   ci_lo   ci_hi     n events
+    cit_nonhisp 0.09648 0.001339 0.09384 0.09912 86800   8959
+       cit_hisp 0.07781 0.003457 0.07099 0.08464  9859    753
+ noncit_nonhisp 0.06868 0.005861 0.05711 0.08025  2248    173
+    noncit_hisp 0.07165 0.008651 0.05457 0.08872  2482    119
+
+Pairwise risk differences (Holm within this outcome):
+                     contrast        rd       se    ci_lo     ci_hi         p
+       cit_hisp - cit_nonhisp -0.018670 0.003746 -0.02606 -0.011270 1.525e-06
+ noncit_nonhisp - cit_nonhisp -0.027800 0.005943 -0.03953 -0.016070 5.888e-06
+    noncit_hisp - cit_nonhisp -0.024830 0.008523 -0.04166 -0.008010 4.051e-03
+    noncit_nonhisp - cit_hisp -0.009133 0.007122 -0.02319  0.004926 2.014e-01
+       noncit_hisp - cit_hisp -0.006164 0.009026 -0.02398  0.011650 4.956e-01
+ noncit_hisp - noncit_nonhisp  0.002969 0.009921 -0.01662  0.022550 7.651e-01
+    p_holm
+ 9.150e-06
+ 2.944e-05
+ 1.620e-02
+ 6.043e-01
+ 9.912e-01
+ 9.912e-01
+
+======================================================================
+SECTION 2: INSTITUTIONAL CONTACT AMONG PAST-YEAR VICTIMS
+(PRIMARY OUTCOME: any_contact, 2021)
+======================================================================
+
+2021 victims (unweighted n=7632): raw contact-item codes
+  VS098: 1=6008  2=1607  8=10  98=2  99=5
+  VS100: 1=608  2=5383  8=14  9=1614  98=1  99=12
+  VS133: 1=558  2=7055  8=12  98=2  99=5
+  VS135: 1=405  2=148  8=15  9=7062  99=2
+  any_contact:  |    0    1 <NA>  | 1446 6173   13 
+
+2018 victims (unweighted n=10068): raw contact-item codes
+  VS098: 1=8879  2=1177  8=7  98=2  99=3
+  VS100: 1=814  2=9227  8=9  98=3  99=15
+  VS133: 1=684  2=9366  8=9  98=2  99=7
+  VS135: 1=527  2=151  8=10  9=9375  99=5
+  any_contact:  |    0    1 <NA>  |  990 9068   10 
+
+--- 2021 any_contact (PRIMARY OUTCOME (victims only)): adjusted, dummy+interaction ---
+        Variable     OR CI_low CI_high p_value
+      noncitizen 0.8438 0.5224  1.3630  0.4850
+        hispanic 0.8391 0.6562  1.0730  0.1607
+ hisp_noncitizen 0.8900 0.4030  1.9652  0.7716
+N (model frame) = 7,578;  design df = 166
+Joint Wald test, citgrp (4 groups): F=0.992, df=(3, 149.0), p=0.3986
+
+Survey-standardized predicted probabilities (predictive margins):
+          group margin      se  ci_lo  ci_hi    n events
+    cit_nonhisp 0.8028 0.00596 0.7910 0.8146 6797   5530
+       cit_hisp 0.7739 0.02045 0.7335 0.8143  572    447
+ noncit_nonhisp 0.7749 0.04089 0.6941 0.8556  143    108
+    noncit_hisp 0.7206 0.07463 0.5733 0.8680   66     52
+
+Pairwise risk differences (Holm within this outcome):
+                     contrast         rd      se    ci_lo   ci_hi      p p_holm
+       cit_hisp - cit_nonhisp -0.0289000 0.02133 -0.07102 0.01322 0.1773      1
+ noncit_nonhisp - cit_nonhisp -0.0279400 0.04171 -0.11030 0.05441 0.5039      1
+    noncit_hisp - cit_nonhisp -0.0821500 0.07538 -0.23100 0.06668 0.2774      1
+    noncit_nonhisp - cit_hisp  0.0009641 0.04447 -0.08683 0.08876 0.9827      1
+       noncit_hisp - cit_hisp -0.0532500 0.07425 -0.19990 0.09336 0.4743      1
+ noncit_hisp - noncit_nonhisp -0.0542100 0.07640 -0.20510 0.09663 0.4790      1
+
+--- 2018 any_contact (REPLICATION (victims only)): adjusted, dummy+interaction ---
+        Variable     OR CI_low CI_high p_value
+      noncitizen 0.8945 0.4841  1.6530  0.7203
+        hispanic 0.8504 0.6439  1.1231  0.2515
+ hisp_noncitizen 1.0040 0.2783  3.6219  0.9951
+N (model frame) = 9,994;  design df = 170
+Joint Wald test, citgrp (4 groups): F=0.508, df=(3, 153.0), p=0.6776
+
+Survey-standardized predicted probabilities (predictive margins):
+          group margin       se  ci_lo  ci_hi    n events
+    cit_nonhisp 0.9007 0.004297 0.8922 0.9092 8952   8094
+       cit_hisp 0.8854 0.013150 0.8594 0.9113  751    661
+ noncit_nonhisp 0.8903 0.029690 0.8317 0.9490  173    155
+    noncit_hisp 0.8741 0.062700 0.7503 0.9979  118    101
+
+Pairwise risk differences (Holm within this outcome):
+                     contrast        rd      se    ci_lo   ci_hi      p p_holm
+       cit_hisp - cit_nonhisp -0.015340 0.01398 -0.04293 0.01226 0.2741      1
+ noncit_nonhisp - cit_nonhisp -0.010340 0.03005 -0.06966 0.04897 0.7311      1
+    noncit_hisp - cit_nonhisp -0.026600 0.06369 -0.15230 0.09913 0.6767      1
+    noncit_nonhisp - cit_hisp  0.004994 0.03150 -0.05720 0.06718 0.8742      1
+       noncit_hisp - cit_hisp -0.011270 0.06488 -0.13930 0.11680 0.8623      1
+ noncit_hisp - noncit_nonhisp -0.016260 0.06723 -0.14900 0.11650 0.8092      1
+
+--- SECONDARY FAMILY A: components, 2021, victims only ---
+
+--- 2021 contact_fin (component): adjusted, dummy+interaction ---
+        Variable     OR CI_low CI_high p_value
+      noncitizen 0.9033 0.5665  1.4403  0.6673
+        hispanic 0.8319 0.6644  1.0417  0.1079
+ hisp_noncitizen 0.9496 0.4318  2.0884  0.8969
+N (model frame) = 7,574;  design df = 166
+Joint Wald test, citgrp (4 groups): F=1.007, df=(3, 149.0), p=0.3913
+
+Survey-standardized predicted probabilities (predictive margins):
+          group margin       se  ci_lo  ci_hi    n events
+    cit_nonhisp 0.7814 0.006269 0.7690 0.7938 6793   5383
+       cit_hisp 0.7488 0.020370 0.7086 0.7890  572    432
+ noncit_nonhisp 0.7638 0.041100 0.6826 0.8449  143    107
+    noncit_hisp 0.7192 0.074930 0.5713 0.8672   66     52
+
+Pairwise risk differences (Holm within this outcome):
+                     contrast       rd      se    ci_lo    ci_hi      p p_holm
+       cit_hisp - cit_nonhisp -0.03263 0.02098 -0.07406 0.008793 0.1218 0.7307
+ noncit_nonhisp - cit_nonhisp -0.01765 0.04201 -0.10060 0.065300 0.6750 1.0000
+    noncit_hisp - cit_nonhisp -0.06218 0.07566 -0.21160 0.087190 0.4123 1.0000
+    noncit_nonhisp - cit_hisp  0.01499 0.04507 -0.07401 0.104000 0.7400 1.0000
+       noncit_hisp - cit_hisp -0.02955 0.07525 -0.17810 0.119000 0.6951 1.0000
+ noncit_hisp - noncit_nonhisp -0.04453 0.07673 -0.19600 0.107000 0.5624 1.0000
+
+--- 2021 contact_bureau (component): adjusted, dummy+interaction ---
+        Variable     OR CI_low CI_high p_value
+      noncitizen 1.0608 0.5056  2.2258  0.8751
+        hispanic 1.3269 0.9242  1.9049  0.1243
+ hisp_noncitizen 1.4350 0.4381  4.7005  0.5484
+N (model frame) = 5,957;  design df = 165
+Joint Wald test, citgrp (4 groups): F=1.395, df=(3, 148.0), p=0.2466
+
+Survey-standardized predicted probabilities (predictive margins):
+          group  margin       se   ci_lo  ci_hi    n events
+    cit_nonhisp 0.09919 0.004843 0.08963 0.1087 5367    535
+       cit_hisp 0.12720 0.019390 0.08893 0.1655  431     50
+ noncit_nonhisp 0.10450 0.035000 0.03544 0.1737  107     10
+    noncit_hisp 0.18100 0.067090 0.04849 0.3134   52      7
+
+Pairwise risk differences (Holm within this outcome):
+                     contrast        rd      se    ci_lo   ci_hi      p p_holm
+       cit_hisp - cit_nonhisp  0.028030 0.01985 -0.01117 0.06723 0.1598  0.959
+ noncit_nonhisp - cit_nonhisp  0.005361 0.03483 -0.06341 0.07413 0.8778  1.000
+    noncit_hisp - cit_nonhisp  0.081770 0.06622 -0.04897 0.21250 0.2186  1.000
+    noncit_nonhisp - cit_hisp -0.022670 0.03971 -0.10110 0.05573 0.5688  1.000
+       noncit_hisp - cit_hisp  0.053740 0.06612 -0.07681 0.18430 0.4175  1.000
+ noncit_hisp - noncit_nonhisp  0.076410 0.07543 -0.07252 0.22530 0.3125  1.000
+
+--- 2021 contact_le (component): adjusted, dummy+interaction ---
+        Variable     OR CI_low CI_high p_value
+      noncitizen 0.4270 0.1544  1.1813  0.1006
+        hispanic 1.1146 0.7523  1.6514  0.5862
+ hisp_noncitizen 1.2855 0.2080  7.9458  0.7857
+N (model frame) = 7,572;  design df = 166
+Joint Wald test, citgrp (4 groups): F=1.047, df=(3, 149.0), p=0.3736
+
+Survey-standardized predicted probabilities (predictive margins):
+          group  margin       se      ci_lo   ci_hi    n events
+    cit_nonhisp 0.07294 0.003751  0.0655400 0.08035 6792    502
+       cit_hisp 0.08055 0.014120  0.0526800 0.10840  572     44
+ noncit_nonhisp 0.03268 0.016180  0.0007389 0.06462  143      5
+    noncit_hisp 0.04609 0.033550 -0.0201400 0.11230   65      3
+
+Pairwise risk differences (Holm within this outcome):
+                     contrast        rd      se    ci_lo     ci_hi       p
+       cit_hisp - cit_nonhisp  0.007611 0.01450 -0.02102  0.036250 0.60040
+ noncit_nonhisp - cit_nonhisp -0.040260 0.01648 -0.07279 -0.007731 0.01559
+    noncit_hisp - cit_nonhisp -0.026850 0.03378 -0.09354  0.039830 0.42770
+    noncit_nonhisp - cit_hisp -0.047870 0.02367 -0.09461 -0.001142 0.04472
+       noncit_hisp - cit_hisp -0.034460 0.03703 -0.10760  0.038640 0.35330
+ noncit_hisp - noncit_nonhisp  0.013410 0.03702 -0.05968  0.086500 0.71760
+  p_holm
+ 1.00000
+ 0.09355
+ 1.00000
+ 0.22360
+ 1.00000
+ 1.00000
+
+--- 2021 police_report (component (contacted LE only)): adjusted, dummy+interaction ---
+        Variable           OR     CI_low      CI_high   p_value
+      noncitizen       0.9097     0.1073 7.712700e+00 9.298e-01
+        hispanic       1.1918     0.4804 2.956700e+00 7.010e-01
+ hisp_noncitizen 1102810.6421 59178.3808 2.055128e+07 6.590e-14
+N (model frame) = 550;  design df = 82
+Joint Wald test, citgrp (4 groups): F=84.048, df=(3, 65.0), p=2.478e-22
+
+Survey-standardized predicted probabilities (predictive margins):
+          group margin        se  ci_lo  ci_hi   n events
+    cit_nonhisp 0.7259 2.305e-02 0.6801 0.7718 498    361
+       cit_hisp 0.7588 7.975e-02 0.6002 0.9175  44     35
+ noncit_nonhisp 0.7071 2.159e-01 0.2776 1.1370   5      4
+    noncit_hisp 1.0000 2.819e-07 1.0000 1.0000   3      3
+
+Pairwise risk differences (Holm within this outcome):
+                     contrast       rd      se    ci_lo  ci_hi         p
+       cit_hisp - cit_nonhisp  0.03288 0.08215 -0.13050 0.1963 6.900e-01
+ noncit_nonhisp - cit_nonhisp -0.01884 0.21710 -0.45060 0.4129 9.311e-01
+    noncit_hisp - cit_nonhisp  0.27410 0.02305  0.22820 0.3199 1.564e-19
+    noncit_nonhisp - cit_hisp -0.05172 0.21800 -0.48540 0.3820 8.131e-01
+       noncit_hisp - cit_hisp  0.24120 0.07975  0.08252 0.3998 3.330e-03
+ noncit_hisp - noncit_nonhisp  0.29290 0.21590 -0.13660 0.7224 1.787e-01
+    p_holm
+ 1.000e+00
+ 1.000e+00
+ 9.383e-19
+ 1.000e+00
+ 1.665e-02
+ 7.146e-01
+
+Family A summary (hisp_noncitizen interaction ORs, Holm):
+        outcome        or         p    p_holm
+    contact_fin 9.496e-01 8.969e-01 1.000e+00
+ contact_bureau 1.435e+00 5.484e-01 1.000e+00
+     contact_le 1.285e+00 7.857e-01 1.000e+00
+  police_report 1.103e+06 6.590e-14 2.636e-13
+
+======================================================================
+SECTION 3: RECONCILIATION -- COOPER'S EXACT 2018 SAMPLE,
+THREE-ROW ESTIMATOR DECOMPOSITION
+======================================================================
+Cooper-rebuild complete-case N = 71,984 (target: 71,984)
+
+Three-row decomposition, Hispanic x Noncitizen interaction:
+                                   row    OR     SE       p
+            Unweighted, model-based SE 1.378 0.1577 0.04200
+       Survey-weighted, model-based SE 1.473 0.1378 0.00499
+ Survey-weighted, Taylor-linearized SE 1.473 0.1978 0.05220
+(Rows B and C must have identical ORs -- same weighted MLE,
+different covariance estimator.)
+
+======================================================================
+SECTION 4: PROTECTIVE-BEHAVIOR ADOPTION (SECONDARY; CORRECTED CODING)
+======================================================================
+
+2021 adjusted interaction ORs (Family B, Holm across 5):
+   behavior     or         p    p_holm
+  passwords 0.7186 1.001e-03 3.003e-03
+ monitoring 0.4761 7.016e-03 1.403e-02
+ protection 0.2903 7.065e-08 3.533e-07
+   software 0.6806 3.968e-04 1.587e-03
+      shred 1.1900 7.772e-02 7.772e-02
+
+2018 adjusted interaction ORs (Family B, Holm across 5):
+   behavior     or         p    p_holm
+  passwords 0.8156 4.527e-02 4.882e-02
+ monitoring 0.5994 9.891e-04 2.967e-03
+ protection 0.6382 2.441e-02 4.882e-02
+   software 0.5013 1.439e-06 7.194e-06
+      shred 1.5410 8.137e-06 3.255e-05
+
+Weighted adoption rates by group:
+ wave   behavior          group rate   se
+ 2021  passwords    cit_nonhisp 52.3 0.51
+ 2021  passwords       cit_hisp 45.0 1.12
+ 2021  passwords noncit_nonhisp 45.4 1.68
+ 2021  passwords    noncit_hisp 23.4 1.21
+ 2021 monitoring    cit_nonhisp  6.9 0.18
+ 2021 monitoring       cit_hisp  5.1 0.32
+ 2021 monitoring noncit_nonhisp  6.1 0.81
+ 2021 monitoring    noncit_hisp  1.5 0.33
+ 2021 protection    cit_nonhisp 11.0 0.20
+ 2021 protection       cit_hisp  8.5 0.37
+ 2021 protection noncit_nonhisp  8.2 0.95
+ 2021 protection    noncit_hisp  1.5 0.28
+ 2021   software    cit_nonhisp 28.8 0.47
+ 2021   software       cit_hisp 22.2 0.72
+ 2021   software noncit_nonhisp 25.6 1.49
+ 2021   software    noncit_hisp 10.7 0.83
+ 2021      shred    cit_nonhisp 75.7 0.42
+ 2021      shred       cit_hisp 69.2 0.74
+ 2021      shred noncit_nonhisp 61.4 1.49
+ 2021      shred    noncit_hisp 55.7 1.72
+ 2018  passwords    cit_nonhisp 48.2 0.42
+ 2018  passwords       cit_hisp 37.8 0.84
+ 2018  passwords noncit_nonhisp 41.1 1.36
+ 2018  passwords    noncit_hisp 19.5 1.01
+ 2018 monitoring    cit_nonhisp 13.0 0.22
+ 2018 monitoring       cit_hisp  8.8 0.40
+ 2018 monitoring noncit_nonhisp 10.0 0.79
+ 2018 monitoring    noncit_hisp  2.9 0.40
+ 2018 protection    cit_nonhisp  9.5 0.18
+ 2018 protection       cit_hisp  6.4 0.30
+ 2018 protection noncit_nonhisp  6.6 0.65
+ 2018 protection    noncit_hisp  2.1 0.34
+ 2018   software    cit_nonhisp 27.2 0.48
+ 2018   software       cit_hisp 19.4 0.58
+ 2018   software noncit_nonhisp 25.6 1.47
+ 2018   software    noncit_hisp  8.2 0.67
+ 2018      shred    cit_nonhisp 76.7 0.37
+ 2018      shred       cit_hisp 68.3 0.89
+ 2018      shred noncit_nonhisp 61.5 1.64
+ 2018      shred    noncit_hisp 59.1 1.45
+
+Adoption ratios: noncit_hisp rate / other-group rate:
+ wave   behavior vs_cit_nonhisp vs_cit_hisp vs_noncit_nonhisp
+ 2018 monitoring           0.22        0.33              0.29
+ 2018  passwords           0.40        0.52              0.47
+ 2018 protection           0.22        0.33              0.32
+ 2018      shred           0.77        0.87              0.96
+ 2018   software           0.30        0.42              0.32
+ 2021 monitoring           0.22        0.30              0.25
+ 2021  passwords           0.45        0.52              0.51
+ 2021 protection           0.14        0.18              0.18
+ 2021      shred           0.74        0.81              0.91
+ 2021   software           0.37        0.48              0.42
+
+======================================================================
+SECTION 5: SENSITIVITY ANALYSES (2021 PRIMARY MODELS)
+======================================================================
+
+Hispanic x Noncitizen interaction across specifications:
+                              spec    or     p     n
+         Baseline (income as rank) 0.891 0.561 92211
+            Income as 8 categories 0.913 0.649 92211
+                     Age quadratic 0.823 0.328 92211
+       Prior victimization control 0.683 0.369  8945
+ Ever had bank acct or credit card 0.965 0.855 88138
+                 CONTACT: baseline 0.890 0.772  7578
+       CONTACT: income categorical 0.898 0.789  7578
+            CONTACT: age quadratic 0.891 0.774  7578
+      CONTACT: prior victimization 0.854 0.692  7534
+
+======================================================================
+COMPLETE. CSV outputs in: [local path removed]
+======================================================================

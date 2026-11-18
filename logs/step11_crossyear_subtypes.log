@@ -1,0 +1,57 @@
+Loading raw data from: [local path removed]
+
+======================================================================
+A. SAMPLE DESCRIPTIVES (corrected pipeline)
+======================================================================
+2018: N=101,389  prevalence=9.29%  hispanic=16.36%  noncitizen=5.77%
+2021: N=92,211  prevalence=7.71%  hispanic=17.08%  noncitizen=5.39%
+
+======================================================================
+B. POOLED CROSS-YEAR MODEL (corrected pipeline)
+======================================================================
+                     Estimate Std. Error  t value  Pr(>|t|)
+year                  -0.2420    0.02361 -10.2471 1.730e-21
+year:noncitizen        0.1689    0.12778   1.3215 1.873e-01
+year:hispanic         -0.0623    0.07150  -0.8714 3.842e-01
+year:hisp_noncitizen  -0.2717    0.25231  -1.0769 2.823e-01
+Joint Wald test, 3 interaction terms: F=1.135, df=(3,319.0), p=0.335
+
+======================================================================
+C. SUBTYPE ANALYSIS, 2021 (corrected pipeline)
+======================================================================
+existing_acct                                 N=92,212   OR=0.7650  p=0.207
+new_account                                   N=92,212   OR=2.5415  p=0.2067
+other_misuse                                  N=92,213   OR=1.9407  p=0.2367
+email_social                                  N=92,213   OR=1.7045  p=0.1558
+
+Subtype summary (Holm across the 4 tests, separately within the interaction, Hispanic, and noncitizen families):
+       outcome     n events   hisp_or       hisp_p noncit_or    noncit_p  inter_or   inter_p hn_events hn_total inter_p_holm  hisp_p_holm noncit_p_holm
+ existing_acct 92212   6551 0.7446300 3.768177e-07 0.9657151 0.729591066 0.7650105 0.2069889        58     2026    0.6232524 1.507271e-06    0.72959107
+   new_account 92212    586 0.7811618 2.078333e-01 0.4973473 0.065976821 2.5415095 0.2067462         4     2026    0.6232524 2.078333e-01    0.16628492
+  other_misuse 92213    904 0.7613498 9.161772e-02 0.4861732 0.055428307 1.9406885 0.2367187         6     2026    0.6232524 1.832354e-01    0.16628492
+  email_social 92213   2123 0.7174196 4.174551e-03 0.4900630 0.008092759 1.7044595 0.1558131        23     2026    0.6232524 1.252365e-02    0.03237104
+
+======================================================================
+D. BENEFITS-FRAUD PANDEMIC SIGNAL (corrected other_misuse pipeline)
+======================================================================
+2018: other-misuse victims with valid VS075 n=405, unweighted 15.8% (64/405), weighted 12.1%
+2021: other-misuse victims with valid VS075 n=907, unweighted 81.3% (737/907), weighted 78.8%
+
+======================================================================
+E. HOUSEHOLD-CLUSTERED SE ROBUSTNESS CHECK, 2021 (corrected pipeline)
+======================================================================
+2021 domain: 92,211 respondents in 48,501 unique households (1.90 per household)
+Official pseudostratum/half-sample design:
+                Estimate Std. Error t value  Pr(>|t|)
+noncitizen       -0.1192    0.09287 -1.2834 2.013e-01
+hispanic         -0.2757    0.05108 -5.3983 2.516e-07
+hisp_noncitizen  -0.1151    0.19752 -0.5827 5.610e-01
+Household-clustered design:
+                Estimate Std. Error t value  Pr(>|t|)
+noncitizen       -0.1192    0.11213 -1.0630 2.878e-01
+hispanic         -0.2757    0.05552 -4.9666 6.838e-07
+hisp_noncitizen  -0.1151    0.18828 -0.6113 5.410e-01
+
+======================================================================
+COMPLETE.
+======================================================================
